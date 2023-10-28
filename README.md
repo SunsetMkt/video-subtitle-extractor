@@ -272,19 +272,6 @@ conda install Shapely
 python -m nuitka --standalone --windows-disable-console --mingw64 --lto no --include-data-dir=C:\Users\Yao\Downloads\vse\backend=backend --include-data-dir=C:\Users\Yao\Downloads\vse\design=design --include-data-dir=C:\Users\Yao\Downloads\vse\dependencies=dependencies  --nofollow-imports --windows-icon-from-ico=C:\Users\Yao\Downloads\vse\design\vse.ico --plugin-enable=tk-inter,multiprocessing --output-dir=C:\Users\Yao\Downloads\out --onefile .\gui.py
 ```
 
-#### 6. GPU版本fast模式提取速度慢
-
-> 为了保证字幕的准确率，自v2.0.0版本起，当您使用了GPU进行加速时，快速模式（fast模式）会切换为高精度模型，若您对精度无过高要求，可改为轻量模型
-
-解决方案：
-
-- 编辑backend文件下的config.py文件，将162-163行改为:
-
-```shell
-if USE_GPU:
-    DET_MODEL_PATH = os.path.join(DET_MODEL_BASE, 'V4', 'ch_det_fast')
-```
-
 ## 社区支持
 
 #### Jetbrains 全家桶支持
