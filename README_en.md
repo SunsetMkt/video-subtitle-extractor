@@ -12,7 +12,7 @@
 - Detect subtitle areas (i.e., coordinates) (as well as scene text if you want) (using deep learning algorithms)
 - Converting graphic text into plain-text (using deep learning algorithms)
 - Filter non-subtitle text (e.g., Logo and watermark etc.)
-- Remove watermark, logo text and original video hard subtitles, see: [video-subtitle-removal (VSR)](https://github.com/YaoFANGUK/video-subtitle-remover/tree/main).
+- Remove watermark, logo text and original video hard subtitles, see: [video-subtitle-remover (VSR)](https://github.com/YaoFANGUK/video-subtitle-remover/tree/main).
 - Remove duplicated subtitle line and **generate srt file** (by calculating text similarity)
 - Batch extraction. You can select multiple video files at one time and this tool can generate subtitles for each video.
 - Multiple language support. You can extract subtitles in 87 languages such as: **Simplified Chinese**, **English**, 
