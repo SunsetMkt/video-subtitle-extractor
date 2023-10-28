@@ -243,20 +243,23 @@ OSError: [WinError 126] 找不到指定的模块。
 
 解决方案：
 
-1) 卸载Shapely
+(1) 卸载Shapely
 
 ```shell
 pip uninstall Shapely -y
 ```
 
-2) 使用conda重新安装Shapely
+(2) 使用conda重新安装Shapely
 
 ```shell
 conda install Shapely             
 ```
 
+#### 4. 7z文件解压错误
 
-#### 4. Nuitka打包代码闪退
+解决方案：升级7-zip解压程序到最新版本
+
+#### 5. Nuitka打包代码闪退
 
 使用Nuitka版本```0.6.19```，将conda虚拟环境Lib文件夹下site-packages的所有文件复制到dependencies文件夹中，把paddle库dataset下image.py的有关subprocess代码全部注释了，使用以下打包命令：
 
