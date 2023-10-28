@@ -87,6 +87,11 @@ if MODE_TYPE == 'accurate':
     ACCURATE_MODE_ON = True
 if MODE_TYPE == 'fast':
     ACCURATE_MODE_ON = False
+if MODE_TYPE == 'auto':
+    if USE_GPU:
+        ACCURATE_MODE_ON = True
+    else:
+        ACCURATE_MODE_ON = False
 # 模型文件目录
 # 默认模型版本 V4
 MODEL_VERSION = 'V4'
@@ -157,12 +162,14 @@ if REC_CHAR_TYPE in MULTI_LANG:
         DICT_PATH = os.path.join(DICT_BASE, f'devanagari_dict.txt')
 
     # 定义文本检测模型
-    if MODE_TYPE == 'fast':
+    if MODE_TYPE == 'auto':
         # 如果使用GPU，则快速模型使用大模型
         if USE_GPU:
             DET_MODEL_PATH = os.path.join(DET_MODEL_BASE, 'V4', 'ch_det')
         else:
-            DET_MODEL_PATH = os.path.join(DET_MODEL_BASE, 'V4', 'ch_det_fast')
+            DET_MODEL_PATH = os.path.join(DET_MODEL_BASE, 'V4', 'ch_det')    
+    elif MODE_TYPE == 'fast':
+        DET_MODEL_PATH = os.path.join(DET_MODEL_BASE, 'V4', 'ch_det_fast')
     else:
         DET_MODEL_PATH = os.path.join(DET_MODEL_BASE, 'V4', 'ch_det')
 
