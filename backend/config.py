@@ -167,7 +167,7 @@ if REC_CHAR_TYPE in MULTI_LANG:
         if USE_GPU:
             DET_MODEL_PATH = os.path.join(DET_MODEL_BASE, 'V4', 'ch_det')
         else:
-            DET_MODEL_PATH = os.path.join(DET_MODEL_BASE, 'V4', 'ch_det')    
+            DET_MODEL_PATH = os.path.join(DET_MODEL_BASE, 'V4', 'ch_det_fast')    
     elif MODE_TYPE == 'fast':
         DET_MODEL_PATH = os.path.join(DET_MODEL_BASE, 'V4', 'ch_det_fast')
     else:
